@@ -1,0 +1,4 @@
+const modulo_interno = require('./modulo_interno') ; 
+
+modulo_interno.soma(2,3)
+
