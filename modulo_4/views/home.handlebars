@@ -1,11 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Handlebars</title>
-</head>
-<body>
-    <h1>Handlebars</h1>
-</body>
-</html>
+<h1>Handlebars</h1>
+<p> teste de handlebars</p>
+{{#if authenticated}}
+    {{#each user}}
+        {{> user }}
+    {{/each}}
+    {{#with userAdmin}}
+        <p>Name: {{{name}}}</p>
+        <p>Age: {{{age}}}</p>
+        <p>Email: {{{email}}}</p>
+    {{/with}}
+{{else}}
+    <h2>User not authenticated</h2>
+{{/if}}
+
