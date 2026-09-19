@@ -1,0 +1,14 @@
+<h1>Products</h1>
+<p> teste de handlebars</p>
+{{#if authenticated}}
+    {{#each products}}
+        {{> product }}
+    {{/each}}
+    {{#with userAdmin}}
+        <p>Name: {{{name}}}</p>
+        <p>Email: {{{email}}}</p>
+    {{/with}}
+{{else}}
+    <h2>User not authenticated</h2>
+{{/if}}
+
